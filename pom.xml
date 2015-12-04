@@ -63,20 +63,20 @@
 			<version>2.2.2</version>
 		</dependency>
 <!-- My oracle -->
-<!-- 
+
  	<dependency>
   		<groupId>com.oracle</groupId>
   		<artifactId>ojdbc</artifactId>
   		<version>11</version>
   	</dependency> 
- -->
 
+<!-- 
  	<dependency>
   		<groupId>connector</groupId>
   		<artifactId>oracle</artifactId>
   		<version>6</version>
   	</dependency> 
-    	
+    	 -->
 <!-- My FielUpload -->
 		<dependency>
 			<groupId>commons-fileupload</groupId>
