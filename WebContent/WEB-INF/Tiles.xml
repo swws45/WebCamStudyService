@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE tiles-definitions PUBLIC
+       "-//Apache Software Foundation//DTD Tiles Configuration 2.1//EN"
+       "http://tiles.apache.org/dtds/tiles-config_2_1.dtd">
+ <tiles-definitions>
+   
+       <!--  home controller  -->
+         <definition name="home.*" template="/WEB-INF/views/inc/layout.jsp"> 
+         	<put-attribute name="title"  value="WebCam Study" />
+            <put-attribute name="header"  value="/WEB-INF/views/inc/{1}/header.jsp" /> 
+        	 <put-attribute name="navi" value="/WEB-INF/views/inc/{1}/navi.jsp" /> 
+      	    <put-attribute name="content" value="/WEB-INF/views/{1}.jsp" /> 
+         </definition>
+         
+           <!-- admin controller  -->
+      <definition name="admin.*.*" template="/WEB-INF/views/inc/layout.jsp"> 
+          <put-attribute name="title"  value="Admin Page" /> 
+          <put-attribute name="header"  value="/WEB-INF/views/inc/admin/header.jsp" /> 
+          <put-attribute name="navi"  value="/WEB-INF/views/{1}/inc/navi.jsp" />
+          <put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
+        </definition> 
+         
+         <!-- user controller  -->
+      <definition name="user.*.*" template="/WEB-INF/views/inc/layout.jsp"> 
+          <put-attribute name="title"  value="WebCam Study" /> 
+          <put-attribute name="header"  value="/WEB-INF/views/inc/main/header.jsp" /> 
+          <put-attribute name="navi"  value="/WEB-INF/views/{1}/inc/navi.jsp" />
+          <put-attribute name="content" value="/WEB-INF/views/{1}/{2}.jsp" />
+        </definition> 
+         
+ </tiles-definitions>      

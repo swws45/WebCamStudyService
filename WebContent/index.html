@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+<script type="text/javascript">
+     function madeAjaxCall(){
+		 $.ajax({
+			type: "post",
+			url:  "test.do",
+		    success:function(data){ //callback 
+		          $.each(data.data,function(index,value){
+		        	  console.log(index+" / "+value);
+		          	$("#test").append(index+" -  id: " + value.id_admin +" / pwd: " + value.pwd_admin+"<br>");
+		          }); 
+		     },
+			error: function(){						
+				alert('Error while request..'	);
+			}
+		}); 
+     }
+</script>
+
+</head>
+<body>
+<a href="main.do">main 이동</a>
+<a href="admin.do">admin 이동</a>
+
+<h1>Ajax TEST</h1>
+<input type="button" value="Ajax Submit" onclick="madeAjaxCall();">
+<hr>
+<div id="test"></div>
+</body>
+</html>

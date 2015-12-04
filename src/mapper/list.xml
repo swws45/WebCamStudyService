@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.ListDao">
+
+	<select id="GetListByMember" resultType="dto.List" >
+		SELECT * FROM LIST WHERE no_mem = #{no_mem} 
+	</select>
+	
+	<select id="GetListByStudy" resultType="dto.List" >
+		SELECT * FROM LIST WHERE no_study = #{no_study} 
+	</select>
+	
+</mapper> 

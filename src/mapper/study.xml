@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="dao.StudyDao">
+
+	<select id="GetNextStudyNo" resultType="int">
+		SELECT SEQ_NO_STUDY.nextval FROM DUAL
+	</select>
+
+	<insert id="InsertStudy" parameterType="dto.Study" >
+		INSERT INTO STUDY VALUES
+		(#{no_study},#{name_study},#{manager_no_study},#{manager_id_study},
+		#{category_study},#{numberofmem_study},#{maxmember_study},
+		#{Date_start_study},#{Date_end_study},#{time_start_study},#{time_end_study},#{lateness_panalty_study},
+		#{latness_time_study},#{absence_panalty_study},#{notice_study})
+	</insert>
+	
+	<insert id="InsertMemberToList" >
+	INSERT INTO LIST VALUES (#{param1},#{param2},100,0,0,0)
+	</insert>
+	
+	<select id="SearchByNo" resultType="dto.Study">
+		select * from study where no_study=#{no_study}
+	</select>
+	
+	 <select id="SearchAllStudy" resultType="dto.Study">
+    	select * from study
+    </select>
+	
+	<select id="SearchStudy" resultType="dto.Study" >
+	SELECT * FROM STUDY WHERE ${param1} LIKE  '%${param2}%'
+	</select>
+	
+</mapper> 
