@@ -1,9 +1,6 @@
 package controllers;
 
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
 import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
@@ -34,7 +31,7 @@ public class StudyroomController {
 	public String searchstudyget(Model model){
 		
 		StudyDao dao = sqlsession.getMapper(StudyDao.class);
-		List<Study> studylist= dao.SearchAllStudy();
+		List<Study> studylist= dao.SearchAllStudy();    
 		
 		model.addAttribute("studylist", studylist);
 		return "user.studyroom.searchstudy";

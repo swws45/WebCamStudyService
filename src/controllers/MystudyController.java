@@ -1,12 +1,7 @@
 package controllers;
 
-import java.text.DateFormat;
 import java.text.ParseException;
-import java.text.SimpleDateFormat;
 import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
 
 import org.apache.ibatis.session.SqlSession;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,18 +9,15 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import dao.ListDao;
-import dao.StudyDao;
-import dto.MyStudyList;
-import dto.Study;
 import util.Util;
+import dto.MyStudyList;
 
 @Controller
 @RequestMapping("/mystudy/")
 public class MystudyController {
 	
 	@Autowired
-	private SqlSession sqlsession; 
+	private SqlSession sqlsession;
 	
 	@Autowired
 	Util util;
