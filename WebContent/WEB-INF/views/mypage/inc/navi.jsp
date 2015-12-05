@@ -1,4 +1,13 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"  pageEncoding="EUC-KR"%>
-<a href="${pageContext.request.contextPath}/mypage/myprofile.do">È¸¿ø Á¤º¸ ¼öÁ¤</a><br>
-<a href="${pageContext.request.contextPath}/mypage/modifypassword.do">ºñ¹Ð¹øÈ£ º¯°æ</a><br>
-<a href="${pageContext.request.contextPath}/mypage/widthdrawal.do">È¸¿øÅ»Åð</a><br>
+<%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
+
+<div class="nav_box">
+<a href="${pageContext.request.contextPath}/mypage/myprofile.do">íšŒì› ì •ë³´ ìˆ˜ì •</a>
+</div>
+<br>
+<div class="nav_box">
+<a href="${pageContext.request.contextPath}/mypage/modifypassword.do">ë¹„ë°€ë²ˆí˜¸ ë³€ê²½</a>
+</div>
+<br>
+<div class="nav_box">
+<a href="${pageContext.request.contextPath}/mypage/widthdrawal.do">íšŒì›íƒˆí‡´</a>
+</div>

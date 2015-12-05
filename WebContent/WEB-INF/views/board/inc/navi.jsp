@@ -1,4 +1,15 @@
-<%@ page language="java" contentType="text/html; charset=EUC-KR"  pageEncoding="EUC-KR"%>
-<a href="${pageContext.request.contextPath}/board/recruitstudy.do">½ºÅÍµð ¸ðÁý</a><br>
-<a href="${pageContext.request.contextPath}/board/freeboard.do">ÀÚÀ¯ °Ô½ÃÆÇ</a><br>
-<a href="${pageContext.request.contextPath}/board/qnaboard.do">Q & A</a><br>
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+	pageEncoding="UTF-8"%>
+	 
+	 
+<div class="nav_box">
+<a href="${pageContext.request.contextPath}/board/recruitstudy.do">ìŠ¤í„°ë”” ëª¨ì§‘</a>
+</div>
+<br>
+<div class="nav_box">
+<a href="${pageContext.request.contextPath}/board/freeboard.do">ìžìœ  ê²Œì‹œíŒ</a>
+</div>
+<br>
+<div class="nav_box">
+<a href="${pageContext.request.contextPath}/board/qnaboard.do">Q & A</a>
+</div>
