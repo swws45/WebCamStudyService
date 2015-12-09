@@ -15,8 +15,7 @@
 		<li><a
 			href="${pageContext.request.contextPath }/board/recruitstudy.do">Board</a></li>
 		<li><a
-			href="${pageContext.request.contextPath }/mypage/myprofile.do">
-			My Page</a></li>
+			href="${pageContext.request.contextPath }/mypage/myprofile.do">My Page</a></li>
 	</ul>
 	<button type="button" data-toggle="modal" data-target="#myModal"  style="width: 80px; position: fixed; right:0px; margin: 55px 25px; ">로그아웃</button>
 </header>
