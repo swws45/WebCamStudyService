@@ -4,19 +4,27 @@
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 
 
-  <mapper namespace="dao.MyPageDao">
+<mapper namespace="dao.MyPageDao">
 
-	<!-- 기본정보 맵핑 -->
-	<select id="SerchByNo" resultType="dto.Member" >
-		SELECT ID_MEM, PWD_MEM, NAME_MEM, INTRO_MEM FROM MEMBER
+	<!-- 기본정보 -->
+	<select id="SearchByNo" resultType="dto.Member">
+		SELECT * FROM MEMBER WHERE NO_MEM = #{NO_MEM} 
 	</select>
-	<!-- PWD 수정 -->
-	<update id="ResetPwd" parameterType="String">
-		UPDATE MEMBER SET PWD_MEM= #{PWD_MEM} WHERE NO_MEM = #{NO_MEM} 
+	<!-- 기본정보 수정 -->
+	<update id="UpdateInfo" >
+		UPDATE MEMBER SET 
+		EMAIL_MEM= #{param1}, INTRO_MEM= #{param2} WHERE NO_MEM = ${param3}
 	</update>
+		
+	<!-- PWD 수정 -->
+	<update id="ResetPwd">
+		UPDATE MEMBER SET PWD_MEM=#{param1} WHERE NO_MEM = ${param2}
+	</update>
+	
 	<!-- 탈퇴 -->
-	<delete id="WithDraw" parameterType="int">
-		DELETE FROM MEMBER WHERE NO_MEM = #{NO_MEM}
+	<delete id="WithDraw" >
+		DELETE FROM MEMBER WHERE
+		NO_MEM = #{NO_MEM}
 	</delete>
 
 </mapper> 

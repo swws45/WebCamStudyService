@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
+<!-- 마이페이지 Navi -->
+
 <div class="nav_box">
 <a href="${pageContext.request.contextPath}/mypage/myprofile.do">회원 정보 수정</a>
 </div>
