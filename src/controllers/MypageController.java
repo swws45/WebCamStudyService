@@ -115,7 +115,7 @@ public class MypageController {
 		return  jsonv;
 	}
 	//계정삭제 처리
-		@RequestMapping(value="widthdrawal.do", method=RequestMethod.POST)
+		@RequestMapping(value="widthdrawal_fin.do", method=RequestMethod.POST)
 		public View delete(String id_mem, String pwd_mem, ModelMap map){
 			MyPageDao dao = sqlsession.getMapper(MyPageDao.class);
 			Member idpwd = dao.SearchByNo(0);
