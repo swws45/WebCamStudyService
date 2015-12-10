@@ -3,7 +3,7 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <script type="text/javascript">
 
-	// id pwd 체크 함수
+// id pwd 체크 함수
 	$(function(){
 		$("#check_user").click(function() {
 			var input_id = $("input[name='user_id']").val();
@@ -14,7 +14,7 @@
 			}else{
 				$.ajax({
 					type: 'post',
-					url: "${pageContext.request.contextPath}/mypage/widthdrawal.do",
+					url: "${pageContext.request.contextPath}/mypage/withdrawl.do",
 					data: {
 						'id_mem':$('#user_id').val(),
 						'pwd_mem':$('#user_pwd').val()
@@ -31,7 +31,7 @@
 							$('#email_mem').attr('readonly', false);
 						} } }) }  }) })
 
-	//계정 삭제처리
+//계정 삭제처리
 	$(function(){
 		$("#delete").click(function() {
 				$.ajax({
