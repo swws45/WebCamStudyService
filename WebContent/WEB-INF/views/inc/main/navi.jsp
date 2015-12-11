@@ -12,8 +12,7 @@
 	<!-- 1µî -->
 	<fieldset>
 		<h3 style="margin-top: 10px; margin-bottom: 3px; color: red;">
-			<span class="glyphicon glyphicon-star"></span> TOP <span
-				class="glyphicon glyphicon-star"></span>
+			<span>¡Ú</span> TOP <span>¡Ú</span>
 		</h3>
 		ID : <br> RunTime :
 	</fieldset>
