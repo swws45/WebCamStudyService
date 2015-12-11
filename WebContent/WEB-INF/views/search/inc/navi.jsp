@@ -13,5 +13,4 @@
 </div>
 <div class="nav_box">
 <a href="${pageContext.request.contextPath}/search/searchstudy.do">Search Study</a>
-</div> --%>
->
+</div>
