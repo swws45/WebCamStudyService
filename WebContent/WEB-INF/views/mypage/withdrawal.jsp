@@ -14,7 +14,7 @@
 			}else{
 				$.ajax({
 					type: 'post',
-					url: "${pageContext.request.contextPath}/mypage/withdrawl.do",
+					url: "${pageContext.request.contextPath}/mypage/withdrawal.do",
 					data: {
 						'id_mem':$('#user_id').val(),
 						'pwd_mem':$('#user_pwd').val()

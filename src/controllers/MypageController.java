@@ -91,15 +91,15 @@ public class MypageController {
 		return jsonv;
 	}
 	//계정삭제 기본 페이지
-	@RequestMapping(value="widthdrawal.do", method=RequestMethod.GET)
+	@RequestMapping(value="withdrawal.do", method=RequestMethod.GET)
 	public String widthdrawal(Model model){
 		MyPageDao dao = sqlsession.getMapper(MyPageDao.class);
 		Member check = dao.SearchByNo(0);
 		model.addAttribute("id", check);
-		return "user.mypage.widthdrawal";
+		return "user.mypage.withdrawal";
 	}
 	//계정삭제 아이디 비번 체크
-	@RequestMapping(value="widthdrawal.do", method=RequestMethod.POST)
+	@RequestMapping(value="withdrawal.do", method=RequestMethod.POST)
 	public View checkwidthdrawal(String id_mem, String pwd_mem, ModelMap map){
 		MyPageDao dao = sqlsession.getMapper(MyPageDao.class);
 		Member idpwd = dao.SearchByNo(0);
@@ -115,7 +115,7 @@ public class MypageController {
 		return  jsonv;
 	}
 	//계정삭제 처리
-		@RequestMapping(value="widthdrawal_fin.do", method=RequestMethod.POST)
+		@RequestMapping(value="withdrawal_fin.do", method=RequestMethod.POST)
 		public View delete(String id_mem, String pwd_mem, ModelMap map){
 			MyPageDao dao = sqlsession.getMapper(MyPageDao.class);
 			Member idpwd = dao.SearchByNo(0);
